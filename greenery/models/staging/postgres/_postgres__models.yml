@@ -3,6 +3,19 @@ version: 2
 models:
   - name: stg_postgres__addresses
     description: "a model with user addresses"
+    
+    columns:
+    - name: address_id
+      description: "unique id"
+      test: 
+      - not_null
+      - unique
+    
+    - name: zipcode
+      description: ""
+      test: 
+      - not_null
+      
   
   - name: stg_postgres__events
     description: "a model with user events"
